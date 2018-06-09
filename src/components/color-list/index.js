@@ -54,6 +54,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   getAllColors: () => dispatch(fetchAll()),
   getOneColor: (id) => dispatch(fetchOne(id)),
+  getRangeColors: (range) => dispatch(fetchRange(range)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ColorList);
