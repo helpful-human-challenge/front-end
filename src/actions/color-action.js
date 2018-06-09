@@ -18,19 +18,19 @@ export const colorSetRange = (colors) => ({
 
 // --- Async Actions --- //
 export const fetchAllColors = () => (dispatch) => {
-  return superagent.get(`${__API_URL__}/colors`)
+  return superagent.get(`${__API_URL__}/color`)
     .then(response => dispatch(colorSet(response.body)))
     .catch(logError);
 };
 
 export const fetchOneColor = (color) => (dispatch) => {
-  return superagent.get(`${__API_URL__}/colors/${color._id}`)
+  return superagent.get(`${__API_URL__}/color/${color._id}`)
     .then(response => dispatch(colorSetOne(response.body)))
     .catch(logError);
 };
 
 export const fetchRangeColor = (range) => (dispatch) => {
-  return superagent.get(`${__API_URL__}/colors/${range}`)
+  return superagent.get(`${__API_URL__}/range/${range}`)
     .then(response => dispatch(colorSetRange(response.body)))
     .catch(logError);
 } ;
