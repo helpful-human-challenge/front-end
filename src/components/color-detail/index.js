@@ -14,7 +14,7 @@ class ColorDetail extends React.Component {
   }
 
   render() {
-    console.log('__DETAIL_PROPS__', this.props.colors);
+    // console.log('__DETAIL_PROPS__', this.props.colors);
     let rangeColor = this.props.range;
     let colorSelect = this.props.colors[0].colorRange;
     return(

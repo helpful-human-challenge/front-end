@@ -19,6 +19,7 @@ class ColorList extends React.Component {
     };
     this.handleDetailView = this.handleDetailView.bind(this);
     this.handleClearDetail = this.handleClearDetail.bind(this);
+    this.onComplete = this.onComplete.bind(this);
   }
 
   componentDidMount() {
@@ -45,12 +46,19 @@ class ColorList extends React.Component {
     });
   }
 
+  onComplete(range) {
+    if(range === '') {
+      this.props.getAllColors();
+    }
+    this.props.getRangeColors(range);
+  }
+
   render() {
     // console.log('__LIST_PROPS__', this.props.colors);
     // console.log('list state', this.state);
     return(
       <div className='color-list'>
-        {/* <Header /> */}
+        <Header onComplete={this.onComplete}/>
         {/* <NavBar /> */}
         {renderIf(this.props.colors[0] && !this.state.detail,
           this.props.colors.map(color =>
