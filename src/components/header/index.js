@@ -1,4 +1,5 @@
 import React from 'react';
+import './_header.scss';
 
 class Header extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Header extends React.Component {
   render() {
     return(
       <nav>
-        <img src='' alt=''/>
+        <div id='logo'></div>
         <form onSubmit={this.handleSubmit}>
           <input
             type='text'

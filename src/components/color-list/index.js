@@ -47,9 +47,11 @@ class ColorList extends React.Component {
   }
 
   onComplete(range) {
+    this.handleClearDetail();
     if(range === '') {
       this.props.getAllColors();
     }
+    range = range.toLowerCase();
     this.props.getRangeColors(range);
   }
 
@@ -59,7 +61,7 @@ class ColorList extends React.Component {
     return(
       <div className='color-list'>
         <Header onComplete={this.onComplete}/>
-        {/* <NavBar /> */}
+        <NavBar onComplete={this.onComplete}/>
         {renderIf(this.props.colors[0] && !this.state.detail,
           this.props.colors.map(color =>
             <ColorSwatch
