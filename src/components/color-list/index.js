@@ -36,6 +36,7 @@ class ColorList extends React.Component {
   }
 
   handleClearDetail() {
+    this.props.getAllColors();
     this.setState({
       detail: false,
       hex: null,

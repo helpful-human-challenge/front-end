@@ -14,14 +14,16 @@ class ColorDetail extends React.Component {
   }
 
   render() {
-    // console.log('__DETAIL_PROPS__', this.props);
+    console.log('__DETAIL_PROPS__', this.props.colors);
+    let rangeColor = this.props.range;
+    let colorSelect = this.props.colors[0].colorRange;
     return(
       <div className='detail'>
         <div className='main'>
-          <ColorSwatch hex={this.props.mainColor}/>
+          <ColorSwatch hex={this.props.mainColor} range={this.props.range}/>
         </div>
         <div className='range'>
-          {renderIf(this.props.colors,
+          {renderIf(rangeColor === colorSelect,
             this.props.colors.map((color, index) =>
               <ColorSwatch
                 key={index}
@@ -30,6 +32,7 @@ class ColorDetail extends React.Component {
                 range={color.colorRange}
               />)
           )}
+          <button type='button' onClick={() => this.props.clear()}>Clear</button>
         </div>
       </div>
     );
@@ -41,7 +44,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // getOneColor: (id) => dispatch(fetchOneColor(id)),
   getRangeColors: (range) => dispatch(fetchRangeColor(range)),
 });
 

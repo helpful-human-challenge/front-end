@@ -16,6 +16,16 @@ export const colorSetOne = (color) => ({
 //   payload: colors,
 // });
 
+export const nextPage = (index) => ({
+  type: 'NEXT_PAGE',
+  payload: index,
+});
+
+export const previousPage = (index) => ({
+  type: 'PREVIOUS_PAGE',
+  payload: index,
+})
+
 export const fetchRangeColor = (colors) => ({
   type: 'FETCH_RANGE_COLORS',
   payload: colors,
