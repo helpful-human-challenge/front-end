@@ -47,7 +47,12 @@ class ColorList extends React.Component {
   }
 
   onComplete(range) {
-    this.handleClearDetail();
+    this.setState({
+      detail: false,
+      hex: null,
+      id: null,
+      range: null,
+    });
     if(range === '') {
       this.props.getAllColors();
     }
