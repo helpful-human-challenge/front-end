@@ -43,7 +43,7 @@
     "browser": true
   },
   "globals": {
-    "__API_URI__": false,
+    "__API_URL__": true,
     "__DEBUG__": false
   },
   "extends": [

@@ -13,8 +13,12 @@ class ColorList extends React.Component {
 
     this.state = {
       detail: false,
+      hex: null,
+      id: null,
+      range: null,
     };
     this.handleDetailView = this.handleDetailView.bind(this);
+    this.handleClearDetail = this.handleClearDetail.bind(this);
   }
 
   componentDidMount() {
@@ -22,18 +26,30 @@ class ColorList extends React.Component {
   }
 
   handleDetailView(color) {
-    this.props.getOneColor(color._id);
+    // this.props.getOneColor(color._id);
     // this.props.getRangeColors(color.colorRange);
     this.setState({
       detail: true,
+      hex: color.hex,
+      id: color._id,
+      range: color.colorRange,
     });
   }
 
-  renter() {
+  handleClearDetail() {
+    this.setState({
+      detail: false,
+      hex: null,
+      id: null,
+      range: null,
+    });
+  }
+
+  render() {
     return(
       <div className='color-list'>
-        <Header />
-        <NavBar />
+        {/* <Header /> */}
+        {/* <NavBar />
         {renderIf(this.props.colors && !this.state.detail,
           this.props.colors.map(color =>
             <ColorSwatch
@@ -44,7 +60,12 @@ class ColorList extends React.Component {
               range={color.colorRange}
             />)
         )}
-        {renderIf(this.state.detail, <ColorDetail />)}
+        {renderIf(this.state.detail,
+          <ColorDetail
+            mainColor={this.state.hex}
+            range={this.state.range}
+            clear={this.handleClearDetail}
+          />)} */}
       </div>
     );
   }

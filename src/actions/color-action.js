@@ -1,5 +1,5 @@
 import superagent from 'superagent';
-import { logError } from '../lib/utils';
+import { logError, log } from '../lib/utils';
 
 export const colorSet = (colors) => ({
   type: 'FETCH_ALL_COLORS',
