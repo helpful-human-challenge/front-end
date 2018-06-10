@@ -26,13 +26,12 @@ class ColorList extends React.Component {
   }
 
   handleDetailView(color) {
-    // this.props.getOneColor(color._id);
-    // this.props.getRangeColors(color.colorRange);
+    // console.log('handle detail color', color);
     this.setState({
       detail: true,
       hex: color.hex,
-      id: color._id,
-      range: color.colorRange,
+      id: color.id,
+      range: color.range,
     });
   }
 
@@ -46,15 +45,17 @@ class ColorList extends React.Component {
   }
 
   render() {
+    // console.log('__LIST_PROPS__', this.props.colors);
+    // console.log('list state', this.state);
     return(
       <div className='color-list'>
         {/* <Header /> */}
-        {/* <NavBar />
-        {renderIf(this.props.colors && !this.state.detail,
+        {/* <NavBar /> */}
+        {renderIf(this.props.colors[0] && !this.state.detail,
           this.props.colors.map(color =>
             <ColorSwatch
               key={color._id}
-              handleView={this.handleDetailView}
+              handleDetailView={this.handleDetailView}
               id={color._id}
               hex={color.hex}
               range={color.colorRange}
@@ -62,17 +63,18 @@ class ColorList extends React.Component {
         )}
         {renderIf(this.state.detail,
           <ColorDetail
+            clear={this.handleClearDetail}
             mainColor={this.state.hex}
             range={this.state.range}
             clear={this.handleClearDetail}
-          />)} */}
+          />)}
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  colors: state,
+  colors: state.colors,
 });
 
 const mapDispatchToProps = dispatch => ({

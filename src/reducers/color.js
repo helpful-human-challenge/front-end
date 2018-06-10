@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
   case 'FETCH_ONE_COLOR':
     return [...payload];
   case 'FETCH_RANGE_COLORS':
-    return [...payload];
+    return state.filter(color => color.colorRange === payload);
   default: return state;
   }
 };

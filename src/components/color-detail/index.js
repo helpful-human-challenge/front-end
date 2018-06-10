@@ -10,12 +10,11 @@ class ColorDetail extends React.Component {
   }
 
   componentDidMount() {
-    this.props.range
-      ?  this.props.getRangeColors(this.props.range)
-      : undefined;
+    this.props.getRangeColors(this.props.range);
   }
 
   render() {
+    // console.log('__DETAIL_PROPS__', this.props);
     return(
       <div className='detail'>
         <div className='main'>
@@ -23,8 +22,9 @@ class ColorDetail extends React.Component {
         </div>
         <div className='range'>
           {renderIf(this.props.colors,
-            this.props.color.map(color =>
+            this.props.colors.map((color, index) =>
               <ColorSwatch
+                key={index}
                 hex={color.hex}
                 id={color._id}
                 range={color.colorRange}
@@ -37,7 +37,7 @@ class ColorDetail extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  colors: state,
+  colors: state.colors,
 });
 
 const mapDispatchToProps = dispatch => ({

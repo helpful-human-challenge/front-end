@@ -11,7 +11,12 @@ export const colorSetOne = (color) => ({
   payload: color,
 });
 
-export const colorSetRange = (colors) => ({
+// export const colorSetRange = (colors) => ({
+//   type: 'FETCH_RANGE_COLORS',
+//   payload: colors,
+// });
+
+export const fetchRangeColor = (colors) => ({
   type: 'FETCH_RANGE_COLORS',
   payload: colors,
 });
@@ -29,8 +34,8 @@ export const fetchOneColor = (color) => (dispatch) => {
     .catch(logError);
 };
 
-export const fetchRangeColor = (range) => (dispatch) => {
-  return superagent.get(`${__API_URL__}/range/${range}`)
-    .then(response => dispatch(colorSetRange(response.body)))
-    .catch(logError);
-} ;
+// export const fetchRangeColor = (range) => (dispatch) => {
+//   return superagent.get(`${__API_URL__}/range/${range}`)
+//     .then(response => dispatch(colorSetRange(response.body)))
+//     .catch(logError);
+// } ;
