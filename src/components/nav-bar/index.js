@@ -1,4 +1,5 @@
 import React from 'react';
+import './_nav-bar.scss';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -19,14 +20,14 @@ class NavBar extends React.Component {
     };
 
     return(
-      <div>
-        <button type='button' onClick={() => this.props.onComplete(colors[randomColor()])}>
+      <aside className='nav-bar'>
+        <button className='random-search' type='button' onClick={() => this.props.onComplete(colors[randomColor()])}>
           Random Color
         </button>
         <ul>
           {addColorsToList(colors)}
         </ul>
-      </div>
+      </aside>
     );
   }
 }

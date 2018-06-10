@@ -25,7 +25,7 @@ class Header extends React.Component {
     return(
       <nav>
         <div id='logo'></div>
-        <form onSubmit={this.handleSubmit}>
+        <form className='search-form' onSubmit={this.handleSubmit}>
           <input
             type='text'
             name='range'

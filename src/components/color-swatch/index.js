@@ -15,8 +15,12 @@ class ColorSwatch extends React.Component {
 
   render() {
     // console.log('__SWATCH_PROPS__', this.props);
+    const colorStyle = {
+      backgroundColor: this.state.hex,
+    };
+
     return(
-      <div id={this.state.id} onClick={() => this.props.handleDetailView(this.props)}>
+      <div id={this.state.id} onClick={() => this.props.handleDetailView(this.props)} style={colorStyle}>
         <p>{this.state.hex}</p>
       </div>
     );

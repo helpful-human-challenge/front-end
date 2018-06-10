@@ -1,3 +1,39 @@
+nav {
+  height: 10vh;
+  background-color: #363c3c;
+}
+
 #logo {
+  float: left;
   background: url('../../image/logo-symbol.svg');
+}
+
+.search-form {
+  margin-top: 2vh;
+  margin-right: 3%;
+  float: right;
+}
+
+.search-form input {
+  padding: 3%;
+  height: 4vh;
+  font-size: 20px;
+  font-family: 'Source Serif Pro', serif;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  .search-form {
+    margin-top: 3vh;
+    margin-right: 3%;
+    float: right;
+  }
+
+  .search-form input {
+    padding: 3%;
+    height: 2vh;
+    font-size: 15px;
+    font-family: 'Source Serif Pro', serif;
+    border-radius: 5px;
+  }
 }
