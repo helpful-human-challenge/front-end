@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { renderIf } from '../../lib/utils';
 import { fetchRangeColor } from '../../actions/color-action';
 import ColorSwatch from '../color-swatch';
+import './_color-detail.scss';
 
 class ColorDetail extends React.Component {
   constructor(props) {
@@ -19,21 +20,22 @@ class ColorDetail extends React.Component {
     let colorSelect = this.props.colors[0].colorRange;
     return(
       <div className='detail'>
-        <div className='main'>
+        <div className='main-color'>
           <ColorSwatch hex={this.props.mainColor} range={this.props.range}/>
         </div>
-        <div className='range'>
+        <ul className='range'>
           {renderIf(rangeColor === colorSelect,
             this.props.colors.map((color, index) =>
-              <ColorSwatch
-                key={index}
-                hex={color.hex}
-                id={color._id}
-                range={color.colorRange}
-              />)
+              <li key={index}>
+                <ColorSwatch
+                  hex={color.hex}
+                  id={color._id}
+                  range={color.colorRange}
+                />
+              </li>)
           )}
-          <button type='button' onClick={() => this.props.clear()}>Clear</button>
-        </div>
+        </ul>
+        <button className='clear' type='button' onClick={() => this.props.clear()}>Clear</button>
       </div>
     );
   }

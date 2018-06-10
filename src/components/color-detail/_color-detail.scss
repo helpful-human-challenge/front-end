@@ -1,0 +1,101 @@
+.detail {
+  float: left,
+}
+
+.main-color {
+  margin-left: 2vw;
+  margin-top: 5vh;
+  width: 70vw;
+}
+
+.main-color div {
+  height: 60vh;
+  border-radius: 5px;
+  border: 1px solid #a2a2a2;
+  position: relative;
+}
+
+.main-color div p {
+  position: absolute;
+  margin-top: 50vh;
+  width: 64.8vw;
+  height: 6vh;
+  font-size: 25px;
+  color: #5a5a5a;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding-top: 4vh;
+  padding-left: 5vw;
+}
+
+.range {
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+
+.range li {
+  float: left;
+  margin-right: 2vw;
+  width: 15vw;
+  margin-bottom: 5vh;
+}
+
+.range li div {
+  height: 150px;
+  border-radius: 5px;
+  border: 1px solid #a2a2a2;
+  position: relative
+}
+
+.range li div p {
+  box-sizing: border-box;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 119px;
+  padding: 8px;
+  font-size: 15px;
+  width: 14.8vw;
+  border-radius: 0 0 5px;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  margin-left: 30vw;
+  width: 15vw;
+  height: 5vh;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 15px;
+  color: #363c3c;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #9E9E9E;
+}
+
+@media only screen and (max-width: 720px) {
+  .main-color {
+    margin-left: 2vw;
+    margin-top: 5vh;
+    width: 64vw;
+  }
+
+  .main-color div {
+    height: 60vh;
+    border-radius: 5px;
+    border: 1px solid #a2a2a2;
+    position: relative;
+  }
+
+  .main-color div p {
+    position: absolute;
+    margin-top: 50vh;
+    width: 58.8vw;
+    height: 6vh;
+    font-size: 25px;
+    color: #5a5a5a;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding-top: 4vh;
+    padding-left: 5vw;
+  }
+}
