@@ -28,7 +28,6 @@ class ColorList extends React.Component {
   }
 
   handleDetailView(color) {
-    console.log('color handle detail', color);
     this.props.getRangeColors(color.range)
       .then(() => this.setState({
         detail: true,
