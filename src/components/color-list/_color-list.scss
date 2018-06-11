@@ -1,0 +1,28 @@
+.list-view {
+  margin-left: 20%;
+}
+
+.list-view li {
+  float: left;
+  margin-left: 3vw;
+  margin-top: 50px;
+  height: 100px;
+  width: 15vw;
+}
+
+.list-view li div {
+  height: 100px;
+  background-color: rgb(255, 51, 51);
+  position: relative;
+  border: 1px solid #777;
+  border-radius: 5px;
+}
+
+.list-view li div p {
+  position: absolute;
+  background-color: #fff;
+  padding: 5px 0 5px 5%;
+  margin-top: 73.5px;
+  width: 95%;
+  border-radius: 0 0 5px 5px;
+}

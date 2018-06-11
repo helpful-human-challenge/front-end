@@ -1,14 +1,14 @@
 @media only screen and (min-width: 600px) {
   .nav-bar {
     float: left;
-    width: 200px;
+    width: 20%;
     height: 100vh;
     background-color: #d6d8d8;
   }
 
   .nav-bar ul {
     margin: 5px 10%;
-    width: 200px;
+    // width: 200px;
   }
 
   .nav-bar li {
@@ -33,7 +33,7 @@
 @media only screen and (min-width: 400px) and (max-width: 599px) {
   .nav-bar {
     float: left;
-    width: 25vw;
+    width: 20%;
     height: 100vh;
     background-color: #d6d8d8;
   }
@@ -64,7 +64,7 @@
 @media only screen and (max-width: 399px) {
   .nav-bar {
     float: left;
-    width: 100px;
+    width: 20%;
     height: 100vh;
     background-color: #d6d8d8;
   }

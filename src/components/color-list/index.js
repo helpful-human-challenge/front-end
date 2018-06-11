@@ -6,6 +6,7 @@ import Header from '../header';
 import NavBar from '../nav-bar';
 import ColorDetail from '../color-detail';
 import ColorSwatch from '../color-swatch';
+import './_color-list.scss';
 
 class ColorList extends React.Component {
   constructor(props) {
@@ -67,18 +68,22 @@ class ColorList extends React.Component {
       <div className='color-list'>
         <Header onComplete={this.onComplete}/>
         <NavBar onComplete={this.onComplete}/>
-        {renderIf(this.props.colors[0] && !this.state.detail,
-          this.props.colors.map(color =>
-            <ColorSwatch
-              key={color._id}
-              handleDetailView={this.handleDetailView}
-              id={color._id}
-              hex={color.hex}
-              range={color.colorRange}
-            />)
-        )}
+        <ul className='list-view'>
+          {renderIf(this.props.colors[0] && !this.state.detail,
+            this.props.colors.map(color =>
+              <li key={color._id}>
+                <ColorSwatch
+                  handleDetailView={this.handleDetailView}
+                  id={color._id}
+                  hex={color.hex}
+                  range={color.colorRange}
+                />
+              </li>)
+          )}
+        </ul>
         {renderIf(this.state.detail,
           <ColorDetail
+            handleDetailView={this.handleDetailView}
             clear={this.handleClearDetail}
             mainColor={this.state.hex}
             range={this.state.range}

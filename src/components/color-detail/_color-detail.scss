@@ -1,5 +1,5 @@
 .detail {
-  float: left,
+  margin-left: 25%;
 }
 
 .main-color {
@@ -35,27 +35,27 @@
 
 .range li {
   float: left;
-  margin-right: 2vw;
-  width: 15vw;
+  margin-right: 4%;
+  width: 15%;
   margin-bottom: 5vh;
 }
 
 .range li div {
-  height: 150px;
+  height: 110px;
   border-radius: 5px;
   border: 1px solid #a2a2a2;
-  position: relative
+  position: relative;
 }
 
 .range li div p {
   box-sizing: border-box;
   position: absolute;
   background-color: #fff;
-  margin-top: 119px;
+  margin-top: 79px;
   padding: 8px;
   font-size: 15px;
-  width: 14.8vw;
-  border-radius: 0 0 5px;
+  width: 100%;
+  border-radius: 0 0 5px 5px;
 }
 
 .clear {

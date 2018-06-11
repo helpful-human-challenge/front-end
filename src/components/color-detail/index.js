@@ -28,6 +28,7 @@ class ColorDetail extends React.Component {
             this.props.colors.map((color, index) =>
               <li key={index}>
                 <ColorSwatch
+                  handleDetailView={this.props.handleDetailView}
                   hex={color.hex}
                   id={color._id}
                   range={color.colorRange}
