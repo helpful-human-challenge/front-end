@@ -26,11 +26,6 @@ export const previousPage = (index) => ({
   payload: index,
 });
 
-// export const fetchRangeColor = (colors) => ({
-//   type: 'FETCH_RANGE_COLORS',
-//   payload: colors,
-// });
-
 // --- Async Actions --- //
 export const fetchAllColors = () => (dispatch) => {
   return superagent.get(`${__API_URL__}/color`)

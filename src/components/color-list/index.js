@@ -28,7 +28,6 @@ class ColorList extends React.Component {
   }
 
   handleDetailView(color) {
-    // console.log('handle detail color', color);
     this.setState({
       detail: true,
       hex: color.hex,
@@ -62,8 +61,6 @@ class ColorList extends React.Component {
   }
 
   render() {
-    // console.log('__LIST_PROPS__', this.props.colors);
-    // console.log('list state', this.state);
     return(
       <div className='color-list'>
         <Header onComplete={this.onComplete}/>

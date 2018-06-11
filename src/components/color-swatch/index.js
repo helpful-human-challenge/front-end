@@ -14,7 +14,6 @@ class ColorSwatch extends React.Component {
   }
 
   render() {
-    // console.log('__SWATCH_PROPS__', this.props);
     const colorStyle = {
       backgroundColor: this.state.hex,
     };

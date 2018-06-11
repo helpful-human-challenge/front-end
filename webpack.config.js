@@ -74,19 +74,6 @@ module.exports = {
           },
         ],
       },
-      // {
-      //   test: /\.(jpg|jpeg|gif|png|tiff|svg)$/,
-      //   exclude: /\.glyph.svg/,
-      //   use: [
-      //     {
-      //       loader: 'url-loader',
-      //       options: {
-      //         limit: 6000,
-      //         name: 'image/[name].[ext]',
-      //       },
-      //     },
-      //   ],
-      // },
       {
         test: /\.svg$/,
         exclude: /\.glyph.svg/,
