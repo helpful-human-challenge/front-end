@@ -23,8 +23,8 @@ This is a color swatch application that will display colors from a database and 
 
 ## Known Bugs
 
-1. When clicking on `red` color swatch from main list view, detail view renders main color, but displays colors from all ranges below. Note, this only happens with the first two listed `red` swatches, all others work as intended.
+1. Clicking on a color swatch from detail view currently does not redirect to an updated detail view featuring recently selected color.
 
-2. Clicking on a color swatch from detail view currently does not redirect to an updated detail view featuring recently selected color.
+2. Due to missing pagination implementation, the vertical navbar does not reach bottom of page when scrolling down.
 
-3. Due to missing pagination implementation, the vertical navbar does not reach bottom of page when scrolling down.
+3. **FIXED** When clicking on `red` color swatch from main list view, detail view renders main color, but displays colors from all ranges below. Note, this only happens with the first two listed `red` swatches, all others work as intended.
