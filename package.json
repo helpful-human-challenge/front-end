@@ -8,7 +8,9 @@
     "watch": "webpack-dev-server --inline --hot",
     "test": "jest -i --coverage --verbose",
     "test:watch": "jest --watchAll",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "start": "node index.js",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
