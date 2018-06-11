@@ -28,12 +28,16 @@ class ColorList extends React.Component {
   }
 
   handleDetailView(color) {
-    this.setState({
-      detail: true,
-      hex: color.hex,
-      id: color.id,
-      range: color.range,
-    });
+    console.log('color handle detail', color);
+    this.props.getRangeColors(color.range)
+      .then(() => this.setState({
+        detail: true,
+        hex: color.hex,
+        id: color.id,
+        range: color.range,
+      }))
+      .catch(error => console.log(error));
+
   }
 
   handleClearDetail() {
