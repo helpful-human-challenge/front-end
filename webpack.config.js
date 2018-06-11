@@ -63,7 +63,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(woff|woff2|ttf|eot|glyph|\.svg)$/,
+        test: /\.(woff|woff2|ttf|eot|glyph)$/,
         use: [
           {
             loader: 'url-loader',

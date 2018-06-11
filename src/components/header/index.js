@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../logo';
 import './_header.scss';
 
 class Header extends React.Component {
@@ -24,7 +25,7 @@ class Header extends React.Component {
   render() {
     return(
       <nav>
-        <div id='logo'></div>
+        <Logo />
         <form className='search-form' onSubmit={this.handleSubmit}>
           <input
             type='text'
